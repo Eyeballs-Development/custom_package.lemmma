@@ -83,7 +83,7 @@ class Lemmatizer {
 
   Future<void> loadWordnetFiles(POS pos, String list, String exc) async {
     final fileList =
-        await rootBundle.loadString("assets/$list");
+        await rootBundle.loadString("packages/lemmma/assets/$list");
     final listLines = fileList.split("\n");
 
     for (final line in listLines) {
@@ -92,7 +92,7 @@ class Lemmatizer {
     }
 
     final fileExc =
-        await rootBundle.loadString("assets/$exc");
+        await rootBundle.loadString("packages/lemmma/assets/$exc");
     final listExc = fileExc.split("\n");
 
     if (fileExc.trim().isNotEmpty) {
